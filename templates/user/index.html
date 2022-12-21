@@ -6,7 +6,7 @@
 </head>
 <body>
 {% if user.is_authenticated %}
-    You are logged in by { user.username }}
+    You are logged in by {{ user.username }}
 {% else %}
     You are NOT logged in.
 {% endif %}
