@@ -2,4 +2,6 @@
 
 # Credits
 Backend By @deveworld
-Frontend By @Kioreo
+
+Frontend By @Kioreo \
+(Thanks a lot)
