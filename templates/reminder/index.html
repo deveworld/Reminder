@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <title>Index</title>
     {% load static %}
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="{% static 'index.css' %}">
 </head>
 <body>
-{% if not user.is_authenticated %}
-    <a href="{% url 'user:signup' %}">signup</a>
-    <br>
-    <a href="{% url 'user:signin' %}">signin</a>
-{% else %}
-    {% include 'user/index.html' %}
-{% endif %}
+    <div class="contents">
+        <div class="img_box">
+        </div>
+        <div class="main_box">
+            <div class="main_contents">
+                <div class="main_title">개인 맞춤 <br> 알리미</div>
+                {% if not user.is_authenticated %}
+                    <a class="start_btn" href="{% url 'user:signup' %}">지금 시작하기</a>
+                    <br>
+                    <a class="signUp_btn" href="{% url 'user:signin' %}">이미 회원이신가요?</a>
+                {% else %}
+                    {% include 'user/index.html' %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
