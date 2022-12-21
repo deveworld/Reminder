@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+{% if not user.is_authenticated %}
+    <a href="{% url 'user:signup' %}">signup</a>
+    <br>
+    <a href="{% url 'user:signin' %}">signin</a>
+{% else %}
+    {% include 'user/index.html' %}
+{% endif %}
+</body>
+</html>
