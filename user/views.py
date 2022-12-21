@@ -10,11 +10,8 @@ def signup(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
-            form.save()
-            id = form.cleaned_data.get('id')
-            raw_pass = form.cleaned_data.get('pass')
-            user = authenticate(username=id, password=raw_pass)
-            login(request, user)
+            user = form.save()
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect('reminder:index')
     else:
         form = SignupForm()

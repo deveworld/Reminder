@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["reminder.worldsw.dev"]
 
+CSRF_TRUSTED_ORIGINS = ['https://reminder.worldsw.dev']
 
 # Application definition
 
