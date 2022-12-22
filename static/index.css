@@ -9,24 +9,16 @@ a {
     text-decoration: none;
   }
 
-.contents{
-    overflow: auto;
-    margin-top : 230px;
-    width:650px;
-    height: 450px;
-    border: 3px solid black;
-}
-
 .img_box{
-    float:left;
-    width:325px;
-    height: 450px;
+    float: left;
+    width: 50%;
+    height: 98vh;
     background-color: skyblue;
 }
 .main_box {
-    float:left;
-    width: 325px;
-    height: 450px;
+    float: right;
+    width: 50%;
+    height: 98vh;
 }
 
 .main_title{
